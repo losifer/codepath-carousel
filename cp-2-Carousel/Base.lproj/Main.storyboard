@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oed-pU-oO3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oed-pU-oO3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
     </dependencies>
     <scenes>
         <!--Welcome View Controller-->
@@ -110,24 +110,27 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="Mt6-Pc-0Fd">
-                                <rect key="frame" x="20" y="290" width="280" height="96"/>
+                                <rect key="frame" x="20" y="452" width="280" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_buttons" id="6EJ-mS-5Sb">
+                                        <rect key="frame" x="-20" y="-8" width="320" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QmU-YN-07r">
-                                        <rect key="frame" x="63" y="61" width="153" height="35"/>
+                                        <rect key="frame" x="64" y="61" width="153" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Rb-uY-Nha">
-                                        <rect key="frame" x="0.0" y="3" width="280" height="50"/>
+                                        <rect key="frame" x="0.0" y="4" width="280" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="signInButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fz8-uU-DBe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_buttons" id="6EJ-mS-5Sb">
-                                <rect key="frame" x="0.0" y="420" width="320" height="104"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -140,7 +143,7 @@
                         <outlet property="passwordTextField" destination="mYF-2Z-4F0" id="SDr-bJ-c3S"/>
                         <outlet property="signInButtonView" destination="6EJ-mS-5Sb" id="9Es-va-axt"/>
                         <outlet property="textFieldViewContainer" destination="fUf-xO-Iaq" id="h0f-eu-vrC"/>
-                        <outlet property="userNameTexrField" destination="yBw-A2-f21" id="i1z-qF-YQb"/>
+                        <outlet property="userNameTextField" destination="yBw-A2-f21" id="w0b-Cd-u0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,7 +153,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="634" y="393"/>
+            <point key="canvasLocation" x="641" y="393"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="R9s-W3-Pvw">
@@ -212,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrJ-9D-AFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="693"/>
+            <point key="canvasLocation" x="1043" y="693"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p5p-yR-qIO">

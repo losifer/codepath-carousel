@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A6253041BB495AD001B2D45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6253031BB495AD001B2D45 /* WelcomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3A6253061BB49FA9001B2D45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6253051BB49FA9001B2D45 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3A6253041BB495AD001B2D45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6253031BB495AD001B2D45 /* WelcomeViewController.swift */; };
+		3A6253061BB49FA9001B2D45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6253051BB49FA9001B2D45 /* LoginViewController.swift */; };
 		3AF533171BB36C8900A226EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533161BB36C8900A226EE /* AppDelegate.swift */; };
 		3AF533191BB36C8900A226EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533181BB36C8900A226EE /* ViewController.swift */; };
 		3AF5331C1BB36C8900A226EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF5331A1BB36C8900A226EE /* Main.storyboard */; };
@@ -16,8 +16,8 @@
 		3AF533211BB36C8900A226EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF5331F1BB36C8900A226EE /* LaunchScreen.storyboard */; };
 		3AF5332C1BB36C8900A226EE /* cp_2_CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5332B1BB36C8900A226EE /* cp_2_CarouselTests.swift */; };
 		3AF533371BB36C8900A226EE /* cp_2_CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533361BB36C8900A226EE /* cp_2_CarouselUITests.swift */; };
-		3AF533451BB36E2B00A226EE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533441BB36E2B00A226EE /* Common.swift */; settings = {ASSET_TAGS = (); }; };
-		3AF533471BB3722600A226EE /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533461BB3722600A226EE /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3AF533451BB36E2B00A226EE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533441BB36E2B00A226EE /* Common.swift */; };
+		3AF533471BB3722600A226EE /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF533461BB3722600A226EE /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +199,7 @@
 		3AF5330B1BB36C8900A226EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = los;
 				TargetAttributes = {

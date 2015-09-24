@@ -12,13 +12,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var textFieldViewContainer: UIView!
     @IBOutlet weak var signInButtonView: UIImageView!
-    @IBOutlet weak var userNameTexrField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     var fieldsInitialY: CGFloat!
     var btnInitialY: CGFloat!
     let offset: CGFloat = -100
-    let offsetBtn: CGFloat = -180
+    let offsetBtn: CGFloat = -210
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +39,36 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onTapOut(sender: AnyObject) {
-        userNameTexrField.endEditing(true)
+        userNameTextField.endEditing(true)
         passwordTextField.endEditing(true)
     }
 
+    @IBAction func signInButtonDidTouch(sender: AnyObject) {
+        
+        if userNameTextField.text == "los" && passwordTextField.text == "password" {
+            performSegueWithIdentifier("LoginSegue", sender: nil)
+        } else {
+            // let alertView = UIAlertView(title: "Error", message: "Wrong login info. Please try again", delegate: nil, cancelButtonTitle: "Ok");
+            
+            // alertView.show()
+            
+            
+            let alertView = UIAlertController(title: "Login Error", message: "Wrong login info. Please try again.", preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+                
+                // ...
+                
+            }
+            alertView.addAction(okAction)
+            
+            self.presentViewController(alertView, animated: true) {
+                // ...
+            }
+        }
+        
+    }
+    
     func keyboardWillShow(notification: NSNotification!) {
         
         
