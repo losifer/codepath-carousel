@@ -14,11 +14,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signInButtonView: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButtonContainer: UIView!
     
     var fieldsInitialY: CGFloat!
     var btnInitialY: CGFloat!
     let offset: CGFloat = -100
-    let offsetBtn: CGFloat = -210
+    let offsetBtn: CGFloat = -220
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,12 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         fieldsInitialY = textFieldViewContainer.frame.origin.y
-        btnInitialY = signInButtonView.frame.origin.y
+        btnInitialY = loginButtonContainer.frame.origin.y
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,85 +40,85 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onTapOut(sender: AnyObject) {
-        userNameTextField.endEditing(true)
-        passwordTextField.endEditing(true)
-    }
 
     @IBAction func signInButtonDidTouch(sender: AnyObject) {
         
-        if userNameTextField.text == "los" && passwordTextField.text == "password" {
-            performSegueWithIdentifier("LoginSegue", sender: nil)
-        } else {
-            // let alertView = UIAlertView(title: "Error", message: "Wrong login info. Please try again", delegate: nil, cancelButtonTitle: "Ok");
+       if self.userNameTextField.text == "x" && self.passwordTextField.text == "x" {
+        
+        
+        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
+       
+        
+        presentViewController(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
             
-            // alertView.show()
-            
-            
-            let alertView = UIAlertController(title: "Login Error", message: "Wrong login info. Please try again.", preferredStyle: .Alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            delay(2, closure: { () -> () in
                 
-                // ...
+                self.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("LoginSegue", sender: nil)
                 
-            }
-            alertView.addAction(okAction)
+                
+            })
             
-            self.presentViewController(alertView, animated: true) {
-                // ...
-            }
+            
+            
+        }
+
+        
+      } else {
+        
+        
+        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
+        
+        
+        presentViewController(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
+            
+            delay(2, closure: { () -> () in
+                
+                self.dismissViewControllerAnimated(true, completion: nil)
+                let alertView = UIAlertController(title: "Login Error", message: "Wrong login info. Please try again.", preferredStyle: .Alert)
+                
+                let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+                    
+                    // ...
+                    
+                }
+                alertView.addAction(okAction)
+                
+                self.presentViewController(alertView, animated: true) {
+                    // ...
+                    
+                }
+
+                
+                
+            })
+            
+            
+            
         }
         
+    }
+    }
+    
+    @IBAction func onTapOut(sender: AnyObject) {
+        userNameTextField.endEditing(true)
+        passwordTextField.endEditing(true)
     }
     
     func keyboardWillShow(notification: NSNotification!) {
         
         
-        var userInfo = notification.userInfo!
-        
-        // Get the keyboard height and width from the notification
-        // Size varies depending on OS, language, orientation
-        let kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
-        let durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
-        let animationDuration = durationValue.doubleValue
-        let curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
-        let animationCurve = curveValue.integerValue
-        
-        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
-            
-            // Set view properties in here that you want to match with the animation of the keyboard
-            // If you need it, you can use the kbSize property above to get the keyboard width and height.
-            
-            self.textFieldViewContainer.frame.origin = CGPoint(x: self.textFieldViewContainer.frame.origin.x, y: self.fieldsInitialY + self.offset)
-            
-            self.signInButtonView.frame.origin = CGPoint(x: self.signInButtonView.frame.origin.x, y: self.btnInitialY + self.offsetBtn)
-            
-            }, completion: nil)
+        textFieldViewContainer.frame.origin = CGPoint(x: textFieldViewContainer.frame.origin.x, y: fieldsInitialY + self.offset)
+        loginButtonContainer.frame.origin = CGPoint(x: loginButtonContainer.frame.origin.x, y: btnInitialY + offsetBtn)
     }
     
     func keyboardWillHide(notification: NSNotification!) {
         
         
-        var userInfo = notification.userInfo!
-        
-        // Get the keyboard height and width from the notification
-        // Size varies depending on OS, language, orientation
-        let kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
-        let durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
-        let animationDuration = durationValue.doubleValue
-        let curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
-        let animationCurve = curveValue.integerValue
-        
-        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
-            
-            // Set view properties in here that you want to match with the animation of the keyboard
-            // If you need it, you can use the kbSize property above to get the keyboard width and height.
-            
-            self.textFieldViewContainer.frame.origin = CGPoint(x: self.textFieldViewContainer.frame.origin.x, y: self.fieldsInitialY)
-            self.signInButtonView.frame.origin = CGPoint(x: self.signInButtonView.frame.origin.x, y: self.btnInitialY)
-            
-            }, completion: nil)
-        
+        textFieldViewContainer.frame.origin = CGPoint(x: textFieldViewContainer.frame.origin.x, y: fieldsInitialY)
+        loginButtonContainer.frame.origin = CGPoint(x: loginButtonContainer.frame.origin.x, y: btnInitialY)
     }
 
 }

@@ -29,6 +29,19 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.x
+        
+        let finalOffset = scrollView.contentSize.width - scrollView.frame.width
+        
+        print("Current Offset \(currentOffset) Final Offset \(finalOffset)")
+        
+        if scrollView == finalOffset {
+             pageControl.alpha = 0
+        }
+       
+    }
+    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         
         let page : Int = Int(round(scrollView.contentOffset.x / 320))

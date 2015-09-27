@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oed-pU-oO3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rDT-p4-V0e">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Welcome View Controller-->
         <scene sceneID="Pno-bd-4IP">
             <objects>
-                <viewController id="9XB-A5-tkU" customClass="WelcomeViewController" customModule="cp_2_Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="introVC" id="9XB-A5-tkU" customClass="WelcomeViewController" customModule="cp_2_Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X49-bU-Ha4">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PR-VH-qWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="-288"/>
+            <point key="canvasLocation" x="1353" y="-350"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -122,7 +122,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Rb-uY-Nha">
-                                        <rect key="frame" x="0.0" y="4" width="280" height="50"/>
+                                        <rect key="frame" x="0.0" y="3" width="280" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="signInButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fz8-uU-DBe"/>
@@ -140,10 +140,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="dfL-tp-vEx"/>
                     <connections>
+                        <outlet property="loginButtonContainer" destination="Mt6-Pc-0Fd" id="Chu-Dq-gkK"/>
                         <outlet property="passwordTextField" destination="mYF-2Z-4F0" id="SDr-bJ-c3S"/>
                         <outlet property="signInButtonView" destination="6EJ-mS-5Sb" id="9Es-va-axt"/>
                         <outlet property="textFieldViewContainer" destination="fUf-xO-Iaq" id="h0f-eu-vrC"/>
                         <outlet property="userNameTextField" destination="yBw-A2-f21" id="w0b-Cd-u0J"/>
+                        <segue destination="9XB-A5-tkU" kind="modal" identifier="LoginSegue" modalTransitionStyle="crossDissolve" id="BKa-ot-4WD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,7 +155,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="641" y="393"/>
+            <point key="canvasLocation" x="207" y="-350"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="R9s-W3-Pvw">
@@ -171,32 +173,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile6" id="NoA-Lj-dCW">
+                                        <rect key="frame" x="200" y="908" width="77" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile5" id="UEX-Gk-6Ld">
+                                        <rect key="frame" x="123" y="908" width="77" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile3" id="DJ8-RD-FdR">
+                                        <rect key="frame" x="200" y="831" width="77" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile4" id="9JF-Ce-gjE">
+                                        <rect key="frame" x="46" y="908" width="77" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile2" id="gUB-hQ-VVM">
+                                        <rect key="frame" x="200" y="754" width="77" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile1" id="evc-AH-su2">
+                                        <rect key="frame" x="46" y="754" width="154" height="154"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile6" id="NoA-Lj-dCW">
-                                <rect key="frame" x="75" y="495" width="76" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile5" id="UEX-Gk-6Ld">
-                                <rect key="frame" x="244" y="495" width="76" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile4" id="9JF-Ce-gjE">
-                                <rect key="frame" x="0.0" y="516" width="76" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile2" id="gUB-hQ-VVM">
-                                <rect key="frame" x="49" y="528" width="76" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile1" id="evc-AH-su2">
-                                <rect key="frame" x="113" y="556" width="153" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="intro_tile3" id="DJ8-RD-FdR">
-                                <rect key="frame" x="244" y="527" width="76" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -233,7 +235,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwl-tS-Jef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="393"/>
+            <point key="canvasLocation" x="-198" y="-350"/>
         </scene>
     </scenes>
     <resources>
