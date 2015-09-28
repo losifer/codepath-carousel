@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  SettingsViewController.swift
 //  cp-2-Carousel
 //
 //  Created by Sebastian Drew on 9/28/15.
@@ -8,23 +8,19 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var feedImage: UIImageView!
+    @IBOutlet weak var settingsImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scrollView.contentSize = feedImage.image!.size
-        scrollView.contentInset.top = 0
-        scrollView.contentInset.bottom = 36
-        scrollView.scrollIndicatorInsets.top = 0
-        scrollView.scrollIndicatorInsets.bottom = 36
-        
-        scrollView.sendSubviewToBack(feedImage)
 
-        // Do any additional setup after loading the view.
+        scrollView.contentSize = settingsImage.image!.size
+        // scrollView.contentInset.top = 0
+        // scrollView.contentInset.bottom = 36
+        // scrollView.scrollIndicatorInsets.top = 0
+        // scrollView.scrollIndicatorInsets.bottom = 36
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +28,11 @@ class FeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func settingsButtonDidTouch(sender: AnyObject) {
-        performSegueWithIdentifier("SettingsSegue", sender: self)
+    @IBAction func settingsBackButtonDidTouch(sender: AnyObject) {
+        navigationController!.popViewControllerAnimated(true)
     }
 
-    @IBAction func chatButtonDidTouch(sender: AnyObject) {
-        performSegueWithIdentifier("ConversationsSegue", sender: self)
+    @IBAction func signOutButtonDidTouch(sender: AnyObject) {
     }
     /*
     // MARK: - Navigation

@@ -57,11 +57,18 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = page
         
         if pageControl.currentPage == 3 {
-            pageControl.alpha = 0
-            self.backupSpinButtonContainer.alpha = 1
+            
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.pageControl.alpha = 0
+                
+                self.backupSpinButtonContainer.alpha = 1
+            })
+            
         } else {
-            pageControl.alpha = 1
-            self.backupSpinButtonContainer.alpha = 0
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.pageControl.alpha = 1
+                self.backupSpinButtonContainer.alpha = 0
+            })
         }
 
         
