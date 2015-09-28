@@ -21,6 +21,8 @@ class FeedViewController: UIViewController {
         scrollView.contentInset.bottom = 36
         scrollView.scrollIndicatorInsets.top = 0
         scrollView.scrollIndicatorInsets.bottom = 36
+        
+        scrollView.sendSubviewToBack(feedImage)
 
         // Do any additional setup after loading the view.
     }
