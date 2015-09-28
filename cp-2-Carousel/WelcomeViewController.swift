@@ -12,6 +12,8 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var backupSpinButtonContainer: UIView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,12 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func spinButtonDidTouch(sender: AnyObject) {
+        
+        performSegueWithIdentifier("SpinSegue", sender: self)
+        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -47,6 +55,15 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         let page : Int = Int(round(scrollView.contentOffset.x / 320))
         
         pageControl.currentPage = page
+        
+        if pageControl.currentPage == 3 {
+            pageControl.alpha = 0
+            self.backupSpinButtonContainer.alpha = 1
+        } else {
+            pageControl.alpha = 1
+            self.backupSpinButtonContainer.alpha = 0
+        }
+
         
     }
 
