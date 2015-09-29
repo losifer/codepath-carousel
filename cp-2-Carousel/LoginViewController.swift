@@ -93,7 +93,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
 
         
-      } else {
+       } else if self.userNameTextField.text == "" || self.passwordTextField.text == "" {
+        
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        let alertView = UIAlertController(title: "Login Error", message: "Email and/or password field empty.", preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            
+            // ...
+            
+        }
+        alertView.addAction(okAction)
+        
+        self.presentViewController(alertView, animated: true) {
+            // ...
+            
+        }
+        
+        
+       } else {
         
         
     let alertController = UIAlertController(title: "Logging in", message: nil, preferredStyle: .Alert)
