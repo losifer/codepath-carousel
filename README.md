@@ -2,6 +2,10 @@
 
 This is a prototype for the Carousel app displaying user login and error handling, scrollviews, webviews, pagination with indicator, and animations based on scroll position and load.
 
+log in:
+los@gmail.com
+password
+
 Time spent: Approximately 16 hours development + 2 hours QA and Testing
 
 Optimized for iPhone 5s (portrait)
