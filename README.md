@@ -27,10 +27,8 @@ Optimized for iPhone 5s (portrait)
 # Resources:
 
 1. Codepath Guides & Facebook Group (Much Thanks!)
-2. <a href="http://nshipster.com/">NShipster</a>
-3. Frantic Google searching
-4. Previous failures
+2. Previous failures
 
-<img src="https://github.com/losifer/codepath-dropbox/blob/master/dropbox.gif" alt="Dropbox Prototype Screen Demo" width="320" />
+<img src="https://github.com/losifer/codepath-carousel/blob/master/carousel.gif" alt="Carousel Prototype Screen Demo" width="320" />
 
 <a href="http://www.cockos.com/licecap/">LICEcap - simple animated screen captures</a>
