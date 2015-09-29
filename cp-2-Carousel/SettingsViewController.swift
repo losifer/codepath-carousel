@@ -17,10 +17,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         scrollView.contentSize = settingsImage.image!.size
-        // scrollView.contentInset.top = 0
-        // scrollView.contentInset.bottom = 36
-        // scrollView.scrollIndicatorInsets.top = 0
-        // scrollView.scrollIndicatorInsets.bottom = 36
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,15 +30,9 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func signOutButtonDidTouch(sender: AnyObject) {
+       
+        // ...
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

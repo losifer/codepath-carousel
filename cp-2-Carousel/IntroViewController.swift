@@ -19,13 +19,6 @@ class IntroViewController: UIViewController , UIScrollViewDelegate {
     @IBOutlet weak var photoImage05Dog: UIImageView!
     @IBOutlet weak var photoImage06Fishing: UIImageView!
  
-    
-   // var yOffsets : [Float] = [-285, -240, -415, -408, -480, -500]
-   // var xOffsets : [Float] = [-30, 75, -66, 10, -200, -15]
-   // var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
-   // var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +42,7 @@ class IntroViewController: UIViewController , UIScrollViewDelegate {
     
     @IBAction func createDropboxButtonDidPress(sender: AnyObject) {
         
-        
+        performSegueWithIdentifier("CreateSegue", sender: self)
         
     }
     

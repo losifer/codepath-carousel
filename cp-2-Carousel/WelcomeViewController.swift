@@ -42,7 +42,7 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         
         let finalOffset = scrollView.contentSize.width - scrollView.frame.width
         
-        print("Current Offset \(currentOffset) Final Offset \(finalOffset)")
+        // print("Current Offset \(currentOffset) Final Offset \(finalOffset)")
         
         if scrollView == finalOffset {
              pageControl.alpha = 0
